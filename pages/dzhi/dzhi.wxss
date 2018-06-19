@@ -1,0 +1,40 @@
+/* pages/dzhi/dzhi.wxss */
+.container{
+  padding: 0;
+  margin: 0;
+}
+.name,.tel,.dq,.dz,.sz{
+  width: 90%;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 5%; 
+}
+.name,.dq{
+  border-bottom: 1rpx solid #eee;
+}
+.line{
+  display: inline-block;
+  width: 100%;
+  height: 30rpx;
+  background: #eee;
+}
+input{
+  display: inline-block;
+  position:relative;
+  top:10rpx;
+}
+.body-view{
+  float: right;
+}
+.sub{
+  display: inline-block;
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 38rpx;
+  text-align: center;
+  background: #1E90FF;
+  color: #fff;
+}

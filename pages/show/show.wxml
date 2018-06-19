@@ -1,0 +1,76 @@
+<!--pages/show/show.wxml-->
+<view class='container'>
+  <view class='header'>
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500" circular='true' indicator-color='#d3d3d3' indicator-active-color='rgb(255,153,0)'>
+      <block wx:for="{{banner}}" wx:key="index">
+        <swiper-item class="swipers">
+          <image src="{{item}}" bindtap="previewImage" class="slide-image" data-tip="{{}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='head-text'>
+    <text class='ht-head'>这是标题这是标题这是标题这是标题这是标题这是标题这是标题</text>
+    <text class='ht-price'>￥555</text>
+    <text class='ht-del'>￥666</text>
+    <text class='ht-trans'>运费：12元</text>
+  </view>
+  <text class='line'></text>
+  <view class='main'>
+    <text class='main-t'>--图文详情--</text>
+    <view class='main-c'>
+      <image wx:for="{{details}}" wx:key="index" src='{{item}}'></image>
+    </view>
+  </view>
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <view class='foot'>
+    <text class='foot-left' bindtap='kefu'>客服</text>
+    <text class='foot-left' bindtap='toorder'>购物车</text>
+    <text class="foot-right" style='background:#FFC125' bindtap="addshopcat">加入购物车</text>
+    <text class="foot-right" style='background:#FF8C69' bindtap="purchase">立即购买</text>
+  </view>
+  <!-- 弹出层  -->
+   <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}"> 
+     <view bindtap="toggleDialog"> 
+      <view>
+        <view class="popup_model" bindtap="ismodel"></view>
+        <view class="popup_specifications">
+          <view class="popup_prece">
+            <em class="popup_head" style="background:url('http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg')no-repeat center"></em>
+            <name>
+              <shop_name>1111111111 {{sku_info.sp_name}}</shop_name>
+              <shop_money>¥ {{price}}</shop_money>
+            </name>
+          </view>
+          <selected>已选：
+            <span style="color:#d61734;" wx:if="{{sku_info}}">{{sku_info.sp_name}}</span>
+          </selected>
+          <shop_ul>
+            <li wx:for="{{goods[0].sku_info}}" bindtap="selection" data-id="{{index}}" class="{{statuy==index?'aaa':'bbb'}}">{{item.sp_name}}</li>
+          </shop_ul>
+          <view class="specification">
+            <span>购买数量：</span>
+            <shop_num>
+              <span bindtap="reducenum">-</span>
+              <input type="digit" disabled="disabled" value="{{num}}" maxlength="3" minlength="1" />
+              <span bindtap="addnum">+</span>
+            </shop_num>
+          </view>
+        </view>
+      </view>
+       <view class='tianjia' bindtap='addcar' data-name="{{sku_info.sp_name}}" data-num="{{num}}">立即加入购物车</view> 
+     </view> 
+   </view> 
+  <!-- 推荐 -->
+  <text class='line lbt'></text>
+  <view class='ticon'>推荐</view>
+  <view class='tsx'>换一批</view>
+  <view class='tuijian'>
+    <view class='tjian' bindtap='leave' data-pid="{{tuijian}}" wx:for="{{tuijian}}" wx:key="index" item="item" key="key">
+      <image class='tjimg' src='{{item.url}}'></image>
+      <text class='tjname'>{{item.name}}</text>
+      <view class='tjprice'>￥{{item.price}}</view>
+    </view>
+  </view>
+
+</view>

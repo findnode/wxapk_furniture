@@ -1,0 +1,20 @@
+<!--pages/local/local.wxml-->
+<view class='list' wx:for="{{local}}" wx:key="{{index}}">
+  <view class='li-xx' bindtap='write' data-pid="{{item.name+','+item.tel+','+item.diqu+','+item.diz+','+lock+','+index}}">
+    <text class='name'>{{item.name}}</text>
+    <text class='tel'>{{item.tel}}</text>
+    <text class='mshow' wx:if="{{index==lock}}"><text>默认</text></text>
+    <view class='li-dz'>{{item.diqu}}{{item.diz}}</view>
+    <view class='edit'><image src='../../images/right.png'></image></view>
+  </view>
+  <view class='li-xg'>
+    <text class='moren'  bindtap="moren" data-pid="{{index}}">设为默认地址</text>
+    <!-- <text class='moren' style='color:{{color1}}' bindtap="moren" data-pid="{{index}}">设为默认地址</text> -->
+    <text class='del' bindtap='del' data-pid="{{index}}">删除</text>
+  </view> 
+  <text class='line'></text>
+</view>
+ <view class='bline'></view>
+<view class='button' bindtap='write' data-pid="">
+  添加新地址
+</view>

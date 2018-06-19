@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- top banner -->
+  <view class='header'>
+  <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500" circular='true' indicator-color='rgb(255,255,255)' indicator-active-color='rgb(255,153,0)'>
+    <block wx:for="{{banner}}" wx:key="index">
+      <swiper-item class="swipers">
+          <image mode='widthFix' src="{{item}}" class="slide-image" bindtap='toshop' data-tip="{{}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  </view>
+  <!-- show lb shops ，需要后台接口数据，图片-->
+  <view class='showlb' wx:for="{{detail}}" wx:for-item="item" wx:key="index">
+  <!-- 显示类别名称图片 -->
+      <!-- <image class='lb' src=''>{{detail[index].title}}</image> -->
+      <view class='lb'>{{detail[index].title}}</view>
+      <image wx:for="{{detail[index].list}}" wx:key="index" item="item"
+              key="key" src="{{item.url}}" mode='widthFix' class='mcon' bindtap='toshop' data-tip="{{}}"></image>
+  </view>
+  <!-- footer -->
+  <view class='footer'>
+  诺卡帝尼集成家居
+  </view>
+  <!-- kefu -->
+  <!-- <view class='kefu'>
+   <navigator url=''>
+    <image src=''></image>
+   </navigator>
+  </view> -->
+</view>

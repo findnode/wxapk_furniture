@@ -1,0 +1,7 @@
+<!--pages/user/user.wxml-->
+<view class='container'>
+<view class='top'>
+暂未绑定手机号
+</view>
+<button class='get' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信快速绑定</button>  
+</view>

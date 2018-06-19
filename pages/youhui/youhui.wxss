@@ -1,0 +1,40 @@
+/* pages/youhui/youhui.wxss */
+.swiper-tab{
+    width: 100%;
+    border-bottom:1rpx solid #d5d5d5;
+    text-align: center;
+    line-height: 80rpx;
+}
+.swiper-tab-list{
+    font-size: 38rpx;
+    display: inline-block;
+    width: 33.3%;
+    color: #777;
+}
+.on{
+    color: #1E90FF;
+    border-bottom: 1rpx solid #1E90FF;
+}
+.swiper-box{
+    display: block; 
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+    /* margin-top: 12%; */
+}
+.nouse,.uesed,.lose,{
+    /* height: 92%; */
+    height: 100%;
+    overflow: auto;
+}
+swiper{
+    position: fixed;   
+   /* position: absolute;   */
+}
+.nouse>view,.uesed>view,.lose>view{
+  position: relative;
+  overflow: auto;
+}
+.none{
+  text-align: center;
+}

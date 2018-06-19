@@ -1,0 +1,7 @@
+/* pages/user/user.wxss */
+.get{
+  margin-top:30%;
+  width:80%;
+  background:green;
+  color:#fff;
+}

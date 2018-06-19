@@ -1,0 +1,60 @@
+<view class='app'>
+  <view>
+    <view class='head'></view>
+    <view class='th'>
+      <span>收货地址:</span>
+      <text>{{mitem.area_info}}{{mitem[0].address}}</text>
+    </view>
+    <view class='thr'>收货人:
+      <text>{{mitem[0].true_name}}</text>
+    </view>
+    <view class='thdh'>收货人电话:
+      <text>{{mitem[0].mob_phone}}</text>
+    </view>
+    <view class='line'></view>
+    <view class='main' wx:for="{{mitem[0].goods_info}}">
+      <image src="{{item.goods_image}}"></image>
+      <view>
+        <view class='name'>
+          <text>{{item.goods_name}}</text>
+          <text class='mp'>￥{{item.goods_price}}</text>
+        </view>
+        <view class='gg'>
+          <text>规格:{{item.sku_name}}</text>
+          <text class='mp'>x{{item.goods_num}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='mjly' wx:if="{{mitem.common.order_message!=''&&mitem.common.order_message!=null}}">买家留言:
+      <text>{{mitem.common.order_message}}</text>
+    </view>
+    <view class='mjly' wx:else>买家留言:
+      <text></text>
+    </view>
+    <view class='hj'>合计:
+      <text>￥{{mitem[0].order_pay}}</text>
+    </view>
+    <view class='line2'></view>
+    <view class='je'>商品金额:
+      <text>￥{{mitem[0].goods_amount}}</text>
+    </view>
+    <!-- <view class='yf'>运费:
+      <text>￥{{mitem.shipping_fee}}</text>
+    </view> -->
+  </view>
+  <view class='foot'>
+    <view wx:if="{{mitem[0].order_state==10}}">
+     <view class='fa1' bindtap="remove" data-pid="{{mitem.order_id+','+mitem.order_sn}}">取消订单</view>
+  <view class='fa' bindtap="pay" data-pid="{{mitem.order_id+','+mitem.order_sn}}">立即支付</view>
+    </view>
+    
+    <view wx:if="{{mitem.order_state==20||mitem.order_state==30}}" data-pid="{{mitem.order_id+','+mitem.order_sn}}">
+    <view class='fb' bindtap='get' wx:if="{{mitem.order_state==30}}" data-pid="{{mitem.order_id+','+mitem.order_sn}}">立即收货</view>
+    <view class='fb2' wx:if="{{mitem.order_state==20}}">暂未发货</view>
+    </view>
+    <view wx:if="{{mitem.order_state==40}}">
+      <text class='fc' bindtap="buy_again" data-pid="{{mitem.order_id+','+mitem.order_sn}}">再次购买</text>
+      <!-- <text class='fd' data-pid="{{mitem.order_id+','+mitem.order_sn}}">评价</text> -->
+    </view>
+  </view>
+</view>

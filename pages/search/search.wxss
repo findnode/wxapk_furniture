@@ -1,0 +1,84 @@
+/* pages/search/search.wxss */
+.search{  
+  width: 97%;  
+}  
+.search_no{
+  width: 100%;
+  height: 500rpx;
+}
+.search_arr {  
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx;  
+  margin-left: 20rpx;  
+}  
+.search_arr input{  
+  margin-left: 60rpx;  
+  height: 60rpx;  
+  border-radius: 5px;  
+}  
+.searchcion {  
+  margin: 10rpx 10rpx 10rpx 10rpx;  
+  position: absolute;  
+  left:25rpx;  
+  z-index: 2;  
+  width: 20px;  
+  height: 20px;  
+  text-align: center;  
+} 
+/* tuijian */
+.line{
+  display: inline-block;
+  width: 100%;
+  height: 30rpx;
+  background: #ccc;
+}
+.lbt{
+  margin-top: 20rpx;
+}
+.ticon{
+  width: 100rpx;
+  height: 50rpx;
+  /* display: inline-block; */
+  background: #ff8e0f;
+  color: #fff;
+  /* margin-bottom: 20rpx; */
+  font-size: 32rpx;
+  margin-left:5%;
+  text-align:center;
+}
+.tsx{
+  width: 120rpx;
+  display: inline-block;
+  color: #ccc;
+  margin-bottom:56rpx;
+  margin-left:70%;
+  font-size:32rpx;
+  margin-top:-40rpx;
+}
+.tuijian{
+  display: inline-block;
+  width: 100%; 
+  margin-bottom: 130rpx;
+}
+.tjian{
+  width: 30%;
+  display: inline-block;
+  margin:26rpx 0 0 2.5%;
+}
+.tjimg{
+   width: 100%; 
+   height: 200rpx; 
+   display: flex;
+}
+.tjname{
+  text-align:center;
+  display:inline-block;
+  width:100%;
+  font-size: 28rpx;
+  color: #111;
+}
+.tjprice{
+  text-align: center;
+  color: #ff8e0f;
+  font-size: 28rpx;
+}

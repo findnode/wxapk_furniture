@@ -1,0 +1,18 @@
+<!--pages/dzhi/dzhi.wxml-->
+<view class='container'>
+  <text class='line'></text>
+  <view class='name'>收货人名：<input placeholder='请输入收件人姓名' value='{{userdz[0].xm}}'>{{userdz.xm}}</input></view>
+  <view class='tel'>联系电话：<input placeholder='请输入收件人电话号码' value='{{userdz[0].tel}}'>{{userdz.tel}}</input></view>
+  <text class='line'></text>
+  <view class='dq'>所在地区：<input placeholder='请输入收件人所在地区' value='{{userdz[0].dq}}'>{{userdz.dq}}</input></view>
+  <view class='dz'>详细地址：<input placeholder='请输入收件人详细地址' value='{{userdz[0].dz}}'></input></view>
+  <text class='line'></text>
+  <view class='sz'><text>设为默认</text>
+    <view class="body-view">
+    <switch checked='{{userdz[0].lock}}' bindchange="switch1Change"/>
+    </view>
+</view>
+<text class='line'></text>
+  <view class='sub' bindtap='submit' data-xm="1">确认保存</view>
+
+</view>

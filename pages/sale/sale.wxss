@@ -1,0 +1,37 @@
+/* pages/sale/sale.wxss */
+.swiper-tab{
+    width: 100%;
+    border-bottom:1rpx solid #d5d5d5;
+    text-align: center;
+    line-height: 80rpx;
+}
+.swiper-tab-list{
+    font-size: 38rpx;
+    display: inline-block;
+    width: 50%;
+    color: #777;
+}
+.on{
+    color: #FFA500;
+    border-bottom: 1rpx solid #FFA500;
+}
+.swiper-box{
+    display: block; 
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+    /* margin-top: 12%; */
+}
+.sping,.jdu,{
+    /* height: 92%; */
+    height: 100%;
+    overflow: auto;
+}
+swiper{
+    position: fixed;   
+   /* position: absolute;   */
+}
+.sping>view,.jdu>view{
+  position: relative;
+  overflow: auto;
+}

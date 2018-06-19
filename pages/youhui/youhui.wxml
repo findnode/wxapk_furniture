@@ -1,0 +1,24 @@
+<!--pages/youhui/youhui.wxml-->
+<view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==index ? 'on' : ''}}" wx:for="{{heads}}" data-current="{{index}}" bindtap="swichNav">{{item}}</view>
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
+    <swiper-item>
+      <view class='nouse'>
+        <view wx:if="{{data_no!=''}}"></view>
+        <view class='none' wx:else>暂无数据</view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class='uesed'>
+        <view wx:if="{{data_use!=''}}"></view>
+        <view class='none' wx:else>暂无数据</view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class='lose'>
+        <view wx:if="{{data_lost!=''}}"></view>
+        <view class='none' wx:else>暂无数据</view>
+      </view>
+    </swiper-item>
+  </swiper>

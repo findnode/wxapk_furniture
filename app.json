@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/sale/sale",
+    "pages/show/show",
+    "pages/shop/shop",
+    "pages/order/order",
+    "pages/my/my",
+    "pages/youhui/youhui",
+    "pages/local/local",
+    "pages/user/user",
+    "pages/search/search",
+    "pages/dzhi/dzhi",
+    "pages/detail/detail"
+  ],
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#d81e06",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/i11.png",
+        "iconPath": "images/i1.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/i21.png",
+        "iconPath": "images/i2.png",
+        "pagePath": "pages/shop/shop",
+        "text": "分类"
+      },
+      {
+        "selectedIconPath": "images/i31.png",
+        "iconPath": "images/i3.png",
+        "pagePath": "pages/order/order",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "images/i41.png",
+        "iconPath": "images/i4.png",
+        "pagePath":"pages/my/my",
+        "text":"我的"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

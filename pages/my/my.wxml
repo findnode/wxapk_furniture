@@ -1,0 +1,46 @@
+<!--pages/my/my.wxml-->
+<!-- <text>pages/my/my.wxml</text> -->
+<view class='container'>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <text class='line'></text>
+  <view class='mcon'>
+    <view class='con-top'>
+      <text class='my'>我的订单</text>
+      <text class='myall' bindtap='toorder' data-pid="0">查看全部订单</text>
+    </view>
+    <view class='con1'>
+      <view bindtap='toorder' wx:for="{{ddurl}}" wx:key="index" wx:for-item="item" data-pid="{{item.data}}">
+        <image src='{{item.url}}'></image>
+        <text>{{item.text}}</text>
+      </view>
+      <view bindtap='tosale'>
+        <image src='../../images/my4.png'></image>
+        <text>售后服务</text>
+      </view>
+    </view>
+    <text class='line'></text>
+     <view class='con-top'>
+      <text class='my'>我的服务</text>
+    </view>
+    <view class='con1 con2'>
+      <view bindtap='toyouhui'>
+        <image src='{{iconurl[0]}}'></image>
+        <text>优惠券</text>
+      </view>
+      <view bindtap='tolocal'>
+        <image src='{{iconurl[1]}}'></image>
+        <text>收货地址</text>
+      </view>
+      <view bindtap='touser'>
+        <image src='{{iconurl[2]}}'></image>
+        <text>账号管理</text>
+      </view>
+    </view>
+  </view>
+</view>
