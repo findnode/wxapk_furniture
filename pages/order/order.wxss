@@ -1,6 +1,7 @@
 /* pages/order/order.wxss */
  .container{
   padding: 0;
+  display:block;
 } 
 .nodata{
   margin-top:60%; 
